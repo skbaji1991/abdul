@@ -1,0 +1,37 @@
+pipeline{
+
+agent any
+
+parameters {
+  password defaultValue: 'abd', description: 'text type', name: 'abd'
+}
+
+stages{
+
+Note: name madya gap unte 'git kk' eevedamga evali
+      name madya gap lekuntu git evali
+      
+    stage('git kk'){
+
+        steps{
+           git 'https://github.com/skbaji1991/hello-world.git'
+           sh 'pwd'
+           sh 'ls -l'
+
+        }
+    }
+    
+    note:-echo anne cmd 2 types lo untaaie
+    
+          one type echo echo "this passwd is password" gaa evali
+          two type parametar esunapudu  echo "this passwd: ${params.abd}" gaa evali
+
+    stage(passwd){
+        steps{
+   
+            echo "this passwd: ${params.abd}"
+            
+        }
+    }
+}
+}
